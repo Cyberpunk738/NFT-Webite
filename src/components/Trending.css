@@ -25,7 +25,7 @@
 
 .trending-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem;
 }
 
@@ -123,8 +123,21 @@
   .trending-section {
     padding: 3rem 1.5rem;
   }
-  
+  .trending-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
   .section-title {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trending-section {
+    padding: 2rem 1rem;
+  }
+  .trending-grid {
+    grid-template-columns: 1fr;
   }
 }

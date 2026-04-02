@@ -87,3 +87,23 @@
     font-size: 1.1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  .hero-badge {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+}
