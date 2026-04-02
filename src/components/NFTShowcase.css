@@ -1,0 +1,98 @@
+.nft-showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0 8rem 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.cards-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.nft-card {
+  position: absolute;
+  width: 320px;
+  height: 420px;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform-origin: bottom center;
+  border: 4px solid #fff;
+}
+
+.nft-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  background-color: var(--bg-color);
+}
+
+/* Fan positioning */
+.far-left {
+  transform: translateX(-350px) translateY(80px) rotate(-15deg) scale(0.8);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.mid-left {
+  transform: translateX(-180px) translateY(40px) rotate(-8deg) scale(0.9);
+  z-index: 2;
+  opacity: 0.9;
+}
+
+.center {
+  transform: translateX(0) scale(1);
+  z-index: 3;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1), 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.mid-right {
+  transform: translateX(180px) translateY(40px) rotate(8deg) scale(0.9);
+  z-index: 2;
+  opacity: 0.9;
+}
+
+.far-right {
+  transform: translateX(350px) translateY(80px) rotate(15deg) scale(0.8);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* Hover effect on center card for responsiveness */
+.center:hover {
+  transform: translateX(0) scale(1.05) translateY(-10px);
+}
+
+@media (max-width: 900px) {
+  .cards-container {
+    height: 350px;
+  }
+  .nft-card {
+    width: 240px;
+    height: 320px;
+  }
+  
+  .far-left { transform: translateX(-150px) translateY(80px) rotate(-15deg) scale(0.7); }
+  .mid-left { transform: translateX(-80px) translateY(40px) rotate(-8deg) scale(0.85); }
+  .mid-right { transform: translateX(80px) translateY(40px) rotate(8deg) scale(0.85); }
+  .far-right { transform: translateX(150px) translateY(80px) rotate(15deg) scale(0.7); }
+}
+
+@media (max-width: 600px) {
+  /* On very small screens, show only center card or stack them */
+  .far-left, .far-right {
+    display: none;
+  }
+  .mid-left { transform: translateX(-40px) translateY(20px) rotate(-5deg) scale(0.85); }
+  .mid-right { transform: translateX(40px) translateY(20px) rotate(5deg) scale(0.85); }
+}

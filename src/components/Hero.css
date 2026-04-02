@@ -1,0 +1,88 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.badge-new {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.badge-text {
+  color: var(--text-secondary);
+}
+
+.hero-title {
+  font-size: 5.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #E0E0E0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+/* Enhancing the Glowing Button */
+.glow-btn {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 2px solid var(--accent);
+  padding: 1rem 2rem;
+  color: var(--bg-color); /* Per screenshot the text is dark */
+  background: var(--accent); /* the button in SS seems solid bright yellow inside with a thick black inner look? 
+    Wait, the screenshot has the button filled with yellow, with black text, and a glowing outer border.
+    Let's make it filled yellow-green */
+  box-shadow: 0 0 20px rgba(205, 253, 1, 0.4);
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 35px rgba(205, 253, 1, 0.6);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
